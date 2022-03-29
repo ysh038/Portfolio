@@ -21,9 +21,7 @@ navbarMenu.addEventListener("click", (event) => {
     if (link == null) {
         return;
     }
-    console.log(event.target.dataset.link);
-    const scrollTo = document.querySelector(link);
-    scrollTo.scrollIntoView({ behavior: "smooth" });
+    scrollIntoView(link);
 });
 
 /*const menu_button = document.querySelector(".navbar__menu:nth-child(1)");
@@ -45,3 +43,15 @@ function GoToHome() {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
 }
 */
+
+// Handle Click on "contact me" button on home
+
+const homeContactBtn = document.querySelector(".home__contact");
+homeContactBtn.addEventListener("click", () => {
+    scrollIntoView("#contact");
+});
+
+function scrollIntoView(selector) {
+    const scrollTo = document.querySelector(selector);
+    scrollTo.scrollIntoView({ behavior: "smooth" });
+}
