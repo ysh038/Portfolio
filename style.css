@@ -331,8 +331,14 @@ p {
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 32px;
+    opacity: 1;
+    transition: all var(--animation-duration) ease-out;
 }
 
+.work__projects.anim-out {
+    opacity: 0;
+    transform: scale(0.96) translateY(40px);
+}
 .project {
     position: relative;
     display: flex;
@@ -383,6 +389,10 @@ p {
     margin-left: -12px;
     margin-top: 8px;
     background-color: var(--color-dark-white);
+}
+
+.project.invisible {
+    display: none;
 }
 
 /* Testimonial */
