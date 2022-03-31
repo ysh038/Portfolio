@@ -109,7 +109,7 @@ p {
 
 #navbar.navbar--dark {
     background-color: var(--color-pink);
-    padding: 8px;
+    padding: 16px;
 }
 .navbar__menu {
     display: flex;
@@ -131,7 +131,7 @@ p {
     background-color: var(--color-dark-pink);
 }
 
-.navbar__togle-btn {
+.navbar__toggle-btn {
     position: absolute;
     top: 16px;
     right: 32px;
@@ -376,7 +376,7 @@ p {
 }
 
 .project__description h3 {
-    color: var(--color-white);
+    color: var(--color-orange);
 }
 
 .project__description h3:after {
@@ -384,9 +384,9 @@ p {
     display: block;
     position: relative;
     left: 50%;
-    width: 25px;
+    width: 50px;
     height: 2px;
-    margin-left: -12px;
+    transform: translateX(-50%);
     margin-top: 8px;
     background-color: var(--color-dark-white);
 }
@@ -485,12 +485,13 @@ p {
 }
 
 @media screen and (max-width: 768px) {
-    .navbar__togle-btn {
+    .navbar__toggle-btn {
         display: block;
     }
     #navbar {
         flex-direction: column;
         align-items: flex-start;
+        background-color: var(--color-pink);
     }
     .navbar__menu {
         flex-direction: column;
@@ -498,7 +499,9 @@ p {
         width: 100%;
         display: none;
     }
-
+    .navbar__menu.open {
+        display: block;
+    }
     .about__majors {
         flex-direction: column;
     }
