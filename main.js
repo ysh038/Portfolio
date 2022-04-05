@@ -5,7 +5,6 @@ const navbar = document.querySelector("#navbar");
 const navbarHeight = navbar.getBoundingClientRect().height;
 
 document.addEventListener("scroll", () => {
-    console.log(window.scrollY);
     if (window.scrollY > navbarHeight) {
         navbar.classList.add(`navbar--dark`);
     } else {
@@ -120,6 +119,43 @@ workBtnContainer.addEventListener("click", (e) => {
     }
 */
 });
+
+let front_count = 0;
+let back_count = 0;
+let mobile_count = 0;
+
+const categoryCount = document.querySelectorAll(".category__count");
+
+function CountProjectType() {
+    for (let i = 0; i < projectContainer.children.length; i++) {
+        //console.log(projectContainer.children[i].dataset.type);
+        if (projectContainer.children[i].dataset.type === "front-end") {
+            front_count++;
+        } else if (projectContainer.children[i].dataset.type === "back-end") {
+            back_count++;
+        } else if (projectContainer.children[i].dataset.type === "mobile") {
+            mobile_count++;
+        } else {
+            console.log("잘못된 정보 입력");
+        }
+    }
+}
+
+function PaintCategory() {
+    workBtnContainer.children[0].children[0].innerText =
+        front_count + back_count + mobile_count;
+
+    workBtnContainer.children[1].children[0].innerText = front_count;
+
+    workBtnContainer.children[2].children[0].innerText = back_count;
+
+    workBtnContainer.children[3].children[0].innerText = mobile_count;
+}
+
+CountProjectType();
+PaintCategory();
+
+//console.log(projectContainer.children);
 
 function scrollIntoView(selector) {
     const scrollTo = document.querySelector(selector);

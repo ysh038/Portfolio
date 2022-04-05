@@ -111,13 +111,16 @@ p {
     background-color: var(--color-pink);
     padding: 16px;
 }
+
 .navbar__menu {
     display: flex;
 }
-.nav__logo {
+
+.navbar__logo {
     font-size: var(--font-medium);
     font-weight: var(--weight-semi-bold);
 }
+
 .navbar__menu__item {
     padding: 8px 12px;
     margin: 0 4px;
@@ -324,7 +327,7 @@ p {
     line-height: 24px;
     display: inline-block;
     position: absolute;
-    top: -20px;
+    top: -15px;
     right: 16px;
     opacity: 0;
     transition: all var(--animation-duration) ease-in;
