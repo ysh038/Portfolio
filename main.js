@@ -124,7 +124,7 @@ let front_count = 0;
 let back_count = 0;
 let mobile_count = 0;
 
-const categoryCount = document.querySelectorAll(".category__count");
+//const categoryCount = document.querySelectorAll(".category__count");
 
 function CountProjectType() {
     for (let i = 0; i < projectContainer.children.length; i++) {
